@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <span id="copied"></span>
+    <nav>
+      <h2>Random password generator</h2>
+    </nav>
+    <div class="wrapper">
+      <div class="pwd_box">
+        <span id="password"></span>
+        <span id="strength"></span>
+      </div>
+      <div class="info">
+        <sapn class="icon">ℹ </sapn>
+        <p>Click the password to copy</p>
+      </div>
+      <div class="options_box">
+        <div>
+          <div class="check_container">
+            <label>
+              Lowercase
+              <input
+                title="Lowercase"
+                type="checkbox"
+                checked
+                id="includeLowercase"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label>
+              Uppercase
+              <input
+                title="Uppercase"
+                type="checkbox"
+                checked
+                id="includeUppercase"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label>
+              Numbers
+              <input
+                title="Numbers"
+                type="checkbox"
+                checked
+                id="includeNumbers"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label>
+              Symbols
+              <input
+                title="Symbols"
+                type="checkbox"
+                checked
+                id="includeSymbols"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="slider">
+            <span>Password length</span>
+            <div class="input_container">
+              <input
+                title="password length"
+                type="range"
+                min="4"
+                max="24"
+                value="24"
+                id="passwordLength"
+              />
+              <input
+                title="number value"
+                type="number"
+                min="4"
+                max="24"
+                value="24"
+                id="lengthValue"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="btn_wrapper">
+          <button title="generator" onclick="generatePassword()">
+            Generate
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
